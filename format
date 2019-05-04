@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+for html in *.html; do
+  tidy -config tidy.config "$html" | sponge "$html"
+done
