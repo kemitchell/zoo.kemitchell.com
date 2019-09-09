@@ -1,0 +1,15 @@
+.lowerAlpha {
+  counter-reset: lowerAlpha;
+  list-style-type: none;
+}
+
+.lowerAlpha li {
+  position: relative;
+  counter-increment: lowerAlpha;
+}
+
+.lowerAlpha li:before {
+  position: absolute;
+  left: -2rem;
+  content: counter(lowerAlpha, lower-alpha) ")";
+}
